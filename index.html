@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap" rel="stylesheet">
+    <title>Planing</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_right">
+            <button class="btn_burger-service">
+                <img src="/public/menu.svg" />
+                <p>Сервисы</p>
+            </button>
+            <div class="header_uniName">
+                <img class="uniLogotype" src="/public/logo.svg" alt="logoKFU" />
+                <div class="divider"></div>
+                <p>Модуль отпуск</p>
+            </div>
+        </div>
+
+        <div class="header-left">
+            <div class="header_icons">
+                <img src="/public/search.svg" alt="search" />
+                <img src="/public/message.svg" alt="message" />
+                <img src="/public/geo.svg" alt="geo" />
+                <img src="/public/task.svg" alt="task" />
+                <img src="/public/docs.svg" alt="docs" />
+                <img src="/public/eye.svg" alt="eye" />
+            </div>
+            <div class="header_person">
+                <img src="/public/person.svg" alt="avatar" />
+                <div>
+                    <strong>Перельман Г.Я.</strong>
+                    <p>Гость</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="side_bar">
+            <div class="menu">
+                <div class="menu-item">
+                    <div class="menu-item__title">
+                        <img src="/public/vacation.svg" alt="requests" />
+                        <p>Мои отпуска</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item__title">
+                        <img src="/public/requests.svg" alt="requests" />
+                        <p>Мои заявления</p>
+                        <div class="spisok_icon">
+                            <img src="/public/spisok.svg" />
+                        </div>
+                    </div>
+                    <div class="item_desc">
+                        <div class="under_item">
+                            <p>Заявления</p>
+                            <p>Подать заявление</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item__title">
+                        <img src="/public/calend.svg" alt="requests" />
+                        <p>Планирование</p>
+                        <div class="spisok_icon">
+                            <img src="/public/spisok.svg" />
+                        </div>
+                    </div>
+                    <div class="item_desc">
+                        <div class="under_item">
+                            <p>Ваш план</p>
+                            <p>Запланировать</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item__title active_title">
+                        <img src="/public/boss.svg" alt="requests" />
+                        <p>Руководитель</p>
+                        <div class="spisok_icon">
+                            <img src="/public/spisok.svg" />
+                        </div>
+                    </div>
+                    <div class="item_desc">
+                        <div class="under_item">
+                            <p>Новые заявления (10)</p>
+                            <p>Заявления сотрудников</p>
+                            <p>Отпуска сотрудников</p>
+                            <p>График отпусков</p>
+                            <p class="active_under_item">Планирование</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="plan_and_count">
+                <div class="plan">
+                    <p class="page_title">Планирование</p>
+                    <div class="status">
+                        <p>статус:</p>
+                        <div class="status_value">
+                            <div class="status_value_flag"></div>
+                            <p class="status_value_text">завершено</p>
+                        </div>
+                    </div>
+                    <div class="work_place">
+                        <p>Подразделение</p>
+                        <select class="select">
+                            <option>Центр сопровождения ИТ-инфраструктуры/Отдел сопровождения мультимедиа..</option>
+                            <option>КФУ/Институт математики и механики им. Н.И. Лобачевского</option>
+                            <option>КФУ/Институт физики</option>
+                        </select>
+                    </div>
+                </div>
+                <diV class="count">
+                    <button class="btn_blue">Возобновить планирование</button>
+                </diV>
+            </div>
+            <div class="graph_btns">
+                <div class="graph_btns_left">
+                    <button class="btn_show_graph btn_blue">Посмотреть график</button>
+                    <button class="btn_show_data">Посмотреть данные таблицы</button>
+                </div>
+                <div class="graph_btns_right">
+                    <button class="btn_print">Печать графиков</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
