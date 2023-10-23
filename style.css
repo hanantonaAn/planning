@@ -19,6 +19,7 @@ body {
 }
 
 .header {
+    width: 100%;
     position: sticky;
     font-family: Open Sans;
     height: 80px;
@@ -91,6 +92,7 @@ body {
 }
 
 .main {
+    overflow-x: hidden;
     display: flex;
     height: 100vh;
 }
@@ -168,6 +170,7 @@ body {
     display: flex;
     align-items: start;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .plan {
@@ -204,6 +207,7 @@ body {
     padding: 6px 15px;
     border: solid 1px #0000001A;
     border-radius: 5px;
+    width: 100%;
 }
 
 .work_place {
