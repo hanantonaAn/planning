@@ -50,7 +50,7 @@ body {
 .header-left {
     display: flex;
     align-items: center;
-    gap: 103px;
+    gap: 83px;
 }
 
 .header_right {
