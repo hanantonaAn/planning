@@ -24,7 +24,7 @@ function updateSelectedValue(id) {
 
     if(selected_department.dataset.selectedId) {
        current_element.style.color = "black"
-       if(past_id!=undefined){
+       if(past_id!=undefined && past_id!=id){
         let past_element = document.getElementById(past_id);
         past_element.style.color = "rgba(0,0,0, 0.7)"
        }
