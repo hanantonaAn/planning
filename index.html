@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" />
+    <script src="chart_logic.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap" rel="stylesheet">
@@ -118,11 +119,47 @@
                     </div>
                     <div class="work_place">
                         <p>Подразделение</p>
-                        <select class="select">
-                            <option>Центр сопровождения ИТ-инфраструктуры/Отдел сопровождения мультимедиа..</option>
-                            <option>КФУ/Институт математики и механики им. Н.И. Лобачевского</option>
-                            <option>КФУ/Институт физики</option>
-                        </select>
+                        <div class="width-68 mobile-width-88 department-select">
+                            <div id="selectedDepartment" class="main-department-select" data-selected-position=""
+                                data-selected-id="" data-department-planning=""
+                                onclick="showAllDepartmentOptions('deptSelect')"
+                                style="background-image: url('/public/down_arrow.svg')">Выберите департамент
+                                из списка</div>
+                            <div id="deptSelect" class=" " style="display: none;">
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(4)" class="department-select__option 4" id="4">
+                                        Центр
+                                        разработки ПО</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(6)" class="department-select__option 6" id="6">
+                                        Департамент информатизации и связи</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(15)" class="department-select__option 15" id="15">
+                                        Отдел аналитики и проектирования информационных систем</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(9)" class="department-select__option 9" id="9">
+                                        Отдел
+                                        разработки и технического сопровождения интернет-портала КФУ</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(5)" class="department-select__option 5" id="5">
+                                        Отдел
+                                        разработки информационных систем</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(16)" class="department-select__option 16" id="16">
+                                        Отдел тестирования программного обеспечения</div>
+                                </div>
+                                <div class="department-select__activeOption">
+                                    <div onclick="updateSelectedValue(10)" class="department-select__option 10" id="10">
+                                        Центр сопровождения ИТ-инфраструктуры</div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <diV class="count">

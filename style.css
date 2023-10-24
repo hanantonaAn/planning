@@ -6,6 +6,8 @@
     --color-header: #65A1FA;
     --color-cancel: #D40000;
     --color-bg: #F5F8FB;
+    --color-option-hover: #E9EFF8;
+    --main-color-selected: #004986;
 }
 
 * {
@@ -181,6 +183,7 @@ body {
 }
 
 .plan {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -210,30 +213,111 @@ body {
     border-radius: 100%;
 }
 
-.select {
-    padding: 6px 15px;
-    border: solid 1px #0000001A;
-    border-radius: 5px;
-    width: 100%;
+/* My select block
+ --------------------------------------- */
+
+.department-select {
+    position: relative;
+}
+
+.main-department-select {
     min-width: 400px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 0 0 19px 0 rgba(212, 227, 241, .6);
+    position: inherit;
+    z-index: 11;
+    cursor: pointer;
+}
+
+.main-department-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.department-select__option {
+    font-family: PT Sans;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 19.2px;
+    margin: 0 15px;
+    padding: 15px 0;
+    color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.department-select__activeOption:last-child :first-child {
+    border: none;
+}
+
+.department-select__option:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.department-select__activeOption:first-child {
+    padding-top: 5px;
+}
+
+.department-select__activeOption:last-child {
+    padding-bottom: 5px;
+}
+
+.department-select__activeOption:hover {
+    background-color: var(--color-option-hover);
+    color: rgba(0, 0, 0, 1);
+}
+
+.department-select__activeOption:active {
+    background-color: var(--color-option-hover);
+    color: white;
+}
+
+#deptSelect {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 0 19px 0 rgba(212, 227, 241, .6);
+    position: inherit;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+#deptSelect .open {
+    display: block;
+
 }
 
 .work_place {
     margin-top: 10px;
+    max-width: 622px;
 }
 
 .work_place p {
     font-size: 18px;
     margin-bottom: 15px;
     color: rgba(0, 0, 0, 0.8)
-}
-
-.work_place select {
-    font-size: 16px;
-    font-family: PT Sans;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 15px;
 }
 
 .btn_blue {
