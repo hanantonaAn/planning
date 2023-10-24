@@ -7,6 +7,8 @@
     --color-cancel: #D40000;
     --color-bg: #F5F8FB;
     --color-option-hover: #E9EFF8;
+    --color-btn-hover: #3483F9;
+    --color-btn-focus-border: #045ADB;
     --main-color-selected: #004986;
 }
 
@@ -19,6 +21,9 @@ body {
     height: 100vh;
     font-family: PT Sans;
 }
+
+
+/*           Header          */
 
 .header {
     width: 100%;
@@ -36,9 +41,9 @@ body {
 .header_container {
     padding-left: 30px;
     width: 100%;
+    height: 100%;
     padding-right: 94px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -66,7 +71,8 @@ body {
     color: white;
     padding: 10px 18px;
     font-size: 16px;
-    gap: 14px
+    gap: 14px;
+    cursor: pointer;
 }
 
 .header_uniName {
@@ -77,6 +83,10 @@ body {
     gap: 20px;
 }
 
+.header_uniName img {
+    cursor: pointer;
+}
+
 .divider {
     width: 0.8px;
     height: 40px;
@@ -85,7 +95,19 @@ body {
 
 .header_icons {
     display: flex;
-    gap: 40px
+    height: 100%;
+}
+
+.header_icon_container {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header_icon_container:hover {
+    background-color: var(--color-light_blue);
 }
 
 .header_icons img {
@@ -98,13 +120,18 @@ body {
     align-items: center;
     gap: 20px;
     font-size: 14px;
+    cursor: pointer;
 }
+
+/*        Разделение side-bar и content        */
 
 .main {
     overflow-x: hidden;
     display: flex;
     height: 100vh;
 }
+
+/*          Side bar              */
 
 .side_bar {
     padding-top: 55px;
@@ -127,6 +154,11 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 30px;
+}
+
+.menu-item__title:hover {
+    background: rgba(31, 92, 184, 0.1);
+    cursor: pointer;
 }
 
 .active_title {
@@ -162,9 +194,17 @@ body {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.under_item p:hover {
+    cursor: pointer;
+    color: black
+}
+
+
 .active_under_item {
     color: black
 }
+
+/*        Main content           */
 
 .content {
     padding-top: 60px;
@@ -213,8 +253,7 @@ body {
     border-radius: 100%;
 }
 
-/* My select block
- --------------------------------------- */
+/*        select block       */
 
 .department-select {
     position: relative;
@@ -224,7 +263,6 @@ body {
     min-width: 400px;
     display: block;
     padding: 10px 15px;
-    -moz-padding-start: calc(0.75rem - 3px);
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
@@ -235,10 +273,6 @@ body {
     background-size: 16px 12px;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     box-shadow: 0 0 19px 0 rgba(212, 227, 241, .6);
     position: inherit;
     z-index: 11;
@@ -317,6 +351,8 @@ body {
     color: rgba(0, 0, 0, 0.8)
 }
 
+/*      Buttons      */
+
 .btn_blue {
     border: none;
     background-color: var(--color-light_blue);
@@ -326,6 +362,17 @@ body {
     padding: 13px 24px;
     font-size: 16px;
     font-family: PT Sans;
+    cursor: pointer;
+}
+
+.btn_blue:hover {
+    background-color: var(--color-btn-hover);
+}
+
+.btn_blue:focus {
+    background-color: var(--color-btn-hover);
+    border: 2px solid var(--color-btn-focus-border);
+    padding: 11px 22px;
 }
 
 .graph_btns {
@@ -357,6 +404,12 @@ body {
     font-size: 16px;
     font-family: PT Sans;
     float: left;
+    cursor: pointer;
+}
+
+.btn_show_data:hover {
+    color: white;
+    background-color: var(--color-gray);
 }
 
 .btn_print {
@@ -366,4 +419,10 @@ body {
     font-family: PT Sans;
     background-color: var(--color-bg);
     font-size: 16px;
+    cursor: pointer;
+}
+
+.btn_print:hover {
+    color: white;
+    background-color: var(--color-gray);
 }
