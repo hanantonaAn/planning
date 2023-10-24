@@ -383,7 +383,7 @@ body {
 }
 
 .graph_btns_left {
-    width: 535px;
+    min-width: 441px;
 }
 
 .btn_show_graph {
