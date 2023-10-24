@@ -215,6 +215,7 @@ body {
     border: solid 1px #0000001A;
     border-radius: 5px;
     width: 100%;
+    min-width: 400px;
 }
 
 .work_place {
@@ -251,6 +252,10 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-top: 60px;
+}
+
+.graph_btns_left {
+    width: 535px;
 }
 
 .btn_show_graph {
